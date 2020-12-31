@@ -7,6 +7,7 @@ SRC_URI[main.sha256sum] = "1a0ea57d4c1b1d9394d7e4f6ab94baa2aa49883f4ba2d59a60b75
 # header files are populated by cuda-nvcc-headers recipes
 do_install_append() {
     rm -rf ${D}${prefix}/local/cuda-${CUDA_VERSION}/include
+    rm -rf ${D}${prefix}/local/cuda-${CUDA_VERSION}/targets/aarch64-linux/include
 }
 
 FILES_${PN} = "${prefix}/local/cuda-${CUDA_VERSION}"
